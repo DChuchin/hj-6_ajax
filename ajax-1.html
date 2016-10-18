@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)http://netology-university.bitbucket.org/hj/homework/4.5-ajax/homework-exercise1.html -->
+<html lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+        <title>Домашнее задание к лекции 4.5 «Технология AJAX». Задание 1.</title>
+        <script type="text/javascript">try {
+        window.AG_onLoad = function(func) { if (window.addEventListener) { window.addEventListener('DOMContentLoaded', func); } };
+        window.AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
+        window.AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
+        window.AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
+        var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el)) { el.parentNode.removeChild(el); return; } el = el.parentNode; } };
+        var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
+        var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
+        var AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
+        var AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
+        var AdFox_getCodeScript = function() {};
+        AG_onLoad(function() { AG_each('iframe[id^="AdFox_iframe_"]', function(el) { if (el && el.parentNode) { el.parentNode.removeChild(el); } }); });
+        try { Object.defineProperty(window, 'noAdsAtAll', { get: function() { return true; } }); } catch (ex) {}
+        window.uabInject = function() {};
+        } catch (ex) { console.error('Error executing AG js: ' + ex); }</script>
+    </head>
+    <body>
+        <form id="form" method="get" action="http://netology-hj-ajax.herokuapp.com/homework/login_json" enctype="application/x-www-form-urlencoded" data-role="json-request-form">
+            <label>
+                Email:
+                <input id="email" type="email" name="email" value="" data-role="json-request-form-login">
+            </label>
+            <label>
+                Password:
+                <input id="password" type="password" name="password" value="" data-role="json-request-form-password">
+            </label>
+            <button id="sendBtn" type="submit" data-role="json-request-form-submit">Sign in</button>
+            
+            <div data-role="json-request-error">
+                <!-- error should be displayed here in case if API responds with error -->
+            </div>
+        </form>
+        <span style="display:none" id="preloader" data-role="json-request-preloader">
+            ......send......
+        </span>
+
+        <div data-role="json-request-user-profile">
+            <!-- user profile should be displayed here after successfull login -->
+
+            <img src="http://netology-university.bitbucket.org/hj/homework/4.5-ajax/homework-exercise1.html" alt="" data-role="json-request-user-profile-avatar">
+            <span data-role="json-request-user-profile-fullname">
+                <!-- full name here (name lastname) -->
+            </span>
+            <span data-role="json-request-user-profile-country">
+                <!-- country here -->
+            </span>
+            <span data-role="json-request-user-profile-hobbies">
+                <!-- hobbies here, comma separated -->
+            </span>
+
+            <button data-role="json-request-user-profile-logout">Sign out</button>
+        </div>
+
+    <script src="main.js"></script>
+    </body>
+</html>
