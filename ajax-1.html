@@ -3,7 +3,7 @@
 <html lang="ru">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
         <title>Домашнее задание к лекции 4.5 «Технология AJAX». Задание 1.</title>
         <script type="text/javascript">try {
         window.AG_onLoad = function(func) { if (window.addEventListener) { window.addEventListener('DOMContentLoaded', func); } };
@@ -32,8 +32,8 @@
                 <input id="password" type="password" name="password" value="" data-role="json-request-form-password">
             </label>
             <button id="sendBtn" type="submit" data-role="json-request-form-submit">Sign in</button>
-            
-            <div data-role="json-request-error">
+
+            <div id="error" style="color:red" data-role="json-request-error">
                 <!-- error should be displayed here in case if API responds with error -->
             </div>
         </form>
@@ -41,21 +41,21 @@
             ......send......
         </span>
 
-        <div data-role="json-request-user-profile">
+        <div id="user" style="display:none" data-role="json-request-user-profile">
             <!-- user profile should be displayed here after successfull login -->
 
-            <img src="http://netology-university.bitbucket.org/hj/homework/4.5-ajax/homework-exercise1.html" alt="" data-role="json-request-user-profile-avatar">
-            <span data-role="json-request-user-profile-fullname">
+            <img id="avatar" src="http://netology-university.bitbucket.org/hj/homework/4.5-ajax/homework-exercise1.html" alt="" data-role="json-request-user-profile-avatar">
+            <span id="userName" data-role="json-request-user-profile-fullname">
                 <!-- full name here (name lastname) -->
             </span>
-            <span data-role="json-request-user-profile-country">
+            <span id="userCountry" data-role="json-request-user-profile-country">
                 <!-- country here -->
             </span>
-            <span data-role="json-request-user-profile-hobbies">
+            <span id="userHobbies" data-role="json-request-user-profile-hobbies">
                 <!-- hobbies here, comma separated -->
             </span>
 
-            <button data-role="json-request-user-profile-logout">Sign out</button>
+            <button id="signOut" data-role="json-request-user-profile-logout">Sign out</button>
         </div>
 
     <script src="main.js"></script>
